@@ -9,4 +9,4 @@ $grid->setModel(new \Demo\Model\Contact());
 
 
 $app->add($grid);
-// $app->run();
+$app->run();
