@@ -5,6 +5,11 @@
     "require": {
         "atk4/ui": "^0.4.0"
     },
+    "autoload":{
+        "psr-4":{
+            "Demo\\": "lib/"
+        }
+    },
     "license": "MIT",
     "authors": [
         {

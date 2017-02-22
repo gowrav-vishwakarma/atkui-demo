@@ -22,6 +22,10 @@ class ComposerStaticInit1c5316e36347ab4007b59195947bb3ef
         array (
             'Facebook\\WebDriver\\' => 19,
         ),
+        'D' => 
+        array (
+            'Demo\\' => 5,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -48,6 +52,10 @@ class ComposerStaticInit1c5316e36347ab4007b59195947bb3ef
         'Facebook\\WebDriver\\' => 
         array (
             0 => __DIR__ . '/..' . '/facebook/webdriver/lib',
+        ),
+        'Demo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/lib',
         ),
     );
 
