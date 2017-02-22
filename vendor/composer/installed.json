@@ -1,0 +1,329 @@
+[
+    {
+        "name": "symfony/process",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/process.git",
+            "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/process/zipball/3108b29c21e91d11a0d3f0231ac546f052d25a84",
+            "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2017-02-21 10:07:34",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Process\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Process Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "facebook/webdriver",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/facebook/php-webdriver.git",
+            "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/77300c4ab2025d4316635f592ec849ca7323bd8c",
+            "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": "^5.5 || ~7.0",
+            "symfony/process": "^2.8 || ^3.1"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^1.11",
+            "php-mock/php-mock-phpunit": "^1.1",
+            "phpunit/phpunit": "4.6.* || ~5.0",
+            "satooshi/php-coveralls": "^1.0",
+            "squizlabs/php_codesniffer": "^2.6"
+        },
+        "suggest": {
+            "phpdocumentor/phpdocumentor": "2.*"
+        },
+        "time": "2017-01-13 15:48:08",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Facebook\\WebDriver\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "A PHP client for WebDriver",
+        "homepage": "https://github.com/facebook/php-webdriver",
+        "keywords": [
+            "facebook",
+            "php",
+            "selenium",
+            "webdriver"
+        ]
+    },
+    {
+        "name": "atk4/core",
+        "version": "1.1.11",
+        "version_normalized": "1.1.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/atk4/core.git",
+            "reference": "16992e7c34c9457ccd6d9cc7a84fbff4e326b96c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/atk4/core/zipball/16992e7c34c9457ccd6d9cc7a84fbff4e326b96c",
+            "reference": "16992e7c34c9457ccd6d9cc7a84fbff4e326b96c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "*",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2017-02-18 18:10:59",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "atk4\\core\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Romans Malinovskis",
+                "email": "romans@agiletoolkit.org",
+                "homepage": "https://nearly.guru/"
+            }
+        ],
+        "description": "Agile Core - collection of PHP Traits for designing object-oriented frameworks",
+        "homepage": "https://github.com/atk4/core",
+        "keywords": [
+            "Agile Toolkit",
+            "framework",
+            "php",
+            "trains"
+        ]
+    },
+    {
+        "name": "atk4/dsql",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/atk4/dsql.git",
+            "reference": "e8b2f8019ab8d7806e90d32975bb5172a864dfc9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/atk4/dsql/zipball/e8b2f8019ab8d7806e90d32975bb5172a864dfc9",
+            "reference": "e8b2f8019ab8d7806e90d32975bb5172a864dfc9",
+            "shasum": ""
+        },
+        "require": {
+            "atk4/core": "~1.1.3",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "*",
+            "phpunit/dbunit": ">=1.2",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-09-22 04:57:57",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "atk4\\dsql\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Romans Malinovskis",
+                "email": "romans@agiletoolkit.org",
+                "homepage": "https://nearly.guru/"
+            }
+        ],
+        "description": "Dynamic SQL Builder in PHP",
+        "homepage": "http://agiletoolkit.org/dsql/",
+        "keywords": [
+            "builder",
+            "framework",
+            "orm",
+            "sql"
+        ]
+    },
+    {
+        "name": "atk4/data",
+        "version": "1.1.8",
+        "version_normalized": "1.1.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/atk4/data.git",
+            "reference": "a49eda8ea64d3bccab93b6f7b1efa754a09bd989"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/atk4/data/zipball/a49eda8ea64d3bccab93b6f7b1efa754a09bd989",
+            "reference": "a49eda8ea64d3bccab93b6f7b1efa754a09bd989",
+            "shasum": ""
+        },
+        "require": {
+            "atk4/core": "~1.1.4",
+            "atk4/dsql": "~1.0.9",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "atk4/schema": "*",
+            "codeclimate/php-test-reporter": "*",
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2017-01-20 12:05:56",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "atk4\\data\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Romans Malinovskis",
+                "email": "romans@agiletoolkit.org",
+                "homepage": "https://nearly.guru/"
+            }
+        ],
+        "description": "Agile Data - Database access abstraction framework",
+        "homepage": "https://github.com/atk4/data",
+        "keywords": [
+            "Active Record",
+            "builder",
+            "framework",
+            "mongodb",
+            "mysql",
+            "nosql",
+            "orm",
+            "postgresql",
+            "query",
+            "sql"
+        ]
+    },
+    {
+        "name": "atk4/ui",
+        "version": "0.4",
+        "version_normalized": "0.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/atk4/ui.git",
+            "reference": "4d71465dc16842dba58ff006bc9796803f4cf703"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/atk4/ui/zipball/4d71465dc16842dba58ff006bc9796803f4cf703",
+            "reference": "4d71465dc16842dba58ff006bc9796803f4cf703",
+            "shasum": ""
+        },
+        "require": {
+            "atk4/core": "^1.1.9",
+            "atk4/data": "^1.1.8",
+            "facebook/webdriver": "^1.1",
+            "php": ">=5.6.0"
+        },
+        "require-dev": {
+            "atk4/core": "^1.1.9",
+            "codeclimate/php-test-reporter": "*",
+            "facebook/webdriver": "^1.1",
+            "fzaninotto/faker": "*",
+            "phpunit/phpunit": "4.*",
+            "phpunit/phpunit-selenium": ">=1.2",
+            "semantic/ui": "*"
+        },
+        "time": "2017-02-10 00:29:14",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "atk4\\ui\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Romans Malinovskis",
+                "email": "romans@agiletoolkit.org",
+                "homepage": "https://nearly.guru/"
+            }
+        ],
+        "description": "Agile UI - User Interface Component Library",
+        "homepage": "https://github.com/atk4/ui",
+        "keywords": [
+            "button",
+            "crud",
+            "form",
+            "framework",
+            "gadget",
+            "grid",
+            "render",
+            "ui",
+            "web",
+            "widget"
+        ]
+    }
+]

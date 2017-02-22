@@ -1,0 +1,16 @@
+{
+    "name": "gowrav/atkui-demo",
+    "description": "First demo for ATK UI and AgileData use",
+    "type": "project",
+    "require": {
+        "atk4/ui": "^0.4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gowrav Vishwakarma",
+            "email": "gowravvishwakarma@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
