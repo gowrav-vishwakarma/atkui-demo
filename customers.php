@@ -4,8 +4,11 @@ require_once "init.php";
 
 $app->title = "Customers";
 
-$btn = $app->add(new \atk4\ui\Button("hello"));
-$btn->js('click',$btn->js()->hide());
+$grid = new \atk4\ui\Grid();
+$grid->add(new \Demo\Model\Contact());
+
+$app->add($grid);
+
 
 
 $app->run();
