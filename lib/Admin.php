@@ -16,7 +16,4 @@ class Admin extends \atk4\ui\App {
 		$layout->leftMenu->addItem(['Invoices', 'icon'=>'users'], ['invoices']);
 	}
 
-	function add(...$args){
-		$this->layout->add(...$args);
-	}
 }
