@@ -4,13 +4,13 @@ require_once "init.php";
 
 $app->title = "Customers";
 
-$customer = new \Demo\Model\Contact($db);
+$customer = new Model_Contact($db);
 
 $form = new \atk4\ui\Form();
 // TODO : remove default Save Button
 $form->setModel($customer);
 
-$modal = new \Demo\View\Modal();
+$modal = new View_Modal();
 $save_btn = $modal->addAction('Save',['ui positive right labled icon button']);
 $modal->add($form);
 

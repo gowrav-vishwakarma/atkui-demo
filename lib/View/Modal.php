@@ -1,8 +1,7 @@
 <?php
 
-namespace Demo\View;
 
-class Modal extends \atk4\ui\View {
+class View_Modal extends \atk4\ui\View {
 
 	public $defaultTemplate = './templates/view/modal.html';
 

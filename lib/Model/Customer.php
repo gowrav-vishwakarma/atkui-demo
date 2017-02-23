@@ -1,9 +1,8 @@
 <?php
 
-namespace Demo\Model;
 
 // class Contact extends SQL {
-class Customer extends Contact {
+class Model_Customer extends Contact {
 	
 	function init(){
 		parent::init();

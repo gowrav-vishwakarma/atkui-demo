@@ -1,8 +1,6 @@
 <?php
 
 
-namespace Demo;
-
 class Admin extends \atk4\ui\App {
 	
 	function init(){

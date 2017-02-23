@@ -1,9 +1,8 @@
 <?php
 
-namespace Demo\Model;
 
 // class Contact extends SQL {
-class Contact extends \atk4\data\Model {
+class Model_Contact extends \atk4\data\Model {
 	
 	public $table = "contact";
 

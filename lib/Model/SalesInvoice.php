@@ -1,9 +1,8 @@
 <?php
 
 
-namespace Demo\Model;
 
-class SalesOrder extends QSPMaster {
+class Model_SalesOrder extends Model_QSPMaster {
 	function init(){
 		parent::init();
 

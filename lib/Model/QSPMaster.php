@@ -1,6 +1,5 @@
 <?php
 
-namespace Demo\Model;
 
 /* 
 	Master Model
@@ -14,7 +13,7 @@ namespace Demo\Model;
 	QSP :: Qutation, Sales, Purchase
 */
 
-class QSPMaster extends \atk4\data\Model {
+class Model_QSPMaster extends \atk4\data\Model {
 	
 	public $table = "qsp_master";
 
