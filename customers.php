@@ -23,5 +23,13 @@ $grid = new \atk4\ui\Grid();
 $grid->setModel($customer);
 
 
+$form->onSubmit(function($f)use($modal){
+	throw new \Exception("Error Processing Request", 1);
+	
+	$f->model->save();
+	return $f->js(true,$modal->js()->modal('hide'));
+});
+
+
 $app->add($grid);
 $app->run();
