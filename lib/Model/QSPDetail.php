@@ -20,7 +20,7 @@ class Model_QSPDetail extends \atk4\data\Model {
 	function init(){
 		parent::init();
 
-		$this->hasOne('qsp_master_id',(new QSPMaster()))->addTitle();
+		$this->hasOne('qsp_master_id',(new Model_QSPMaster()))->addTitle();
 		$this->hasOne('item_id','Item');
 		$this->addField('rate');
 		$this->addField('quantity');

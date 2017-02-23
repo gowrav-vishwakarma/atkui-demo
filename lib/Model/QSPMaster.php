@@ -31,7 +31,7 @@ class Model_QSPMaster extends \atk4\data\Model {
 
 		$this->addField('type',['enum'=>['Quotation','SalesInvoice','SalesOrder','PurhcaseOrder','PurchaseInvoice']]);
 
-		$this->hasMany('QSPDetail', (new QSPDetail($db)))
+		$this->hasMany('QSPDetail', (new Model_QSPDetail($db)))
 		    ->addField('total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax']);
 		;
 

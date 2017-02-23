@@ -2,7 +2,7 @@
 
 
 // class Contact extends SQL {
-class Model_Customer extends Contact {
+class Model_Customer extends Model_Contact {
 	
 	function init(){
 		parent::init();
