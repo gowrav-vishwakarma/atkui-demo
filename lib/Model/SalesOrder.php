@@ -7,6 +7,6 @@ class SalesOrder extends QSPMaster {
 	function init(){
 		parent::init();
 
-		$this->addCondition('type','SalesOrder');
+		$this->addCondition('type','SalesInvoice');
 	}
 }
