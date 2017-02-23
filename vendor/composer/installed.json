@@ -204,65 +204,6 @@
         ]
     },
     {
-        "name": "atk4/data",
-        "version": "1.1.8",
-        "version_normalized": "1.1.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/atk4/data.git",
-            "reference": "a49eda8ea64d3bccab93b6f7b1efa754a09bd989"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/atk4/data/zipball/a49eda8ea64d3bccab93b6f7b1efa754a09bd989",
-            "reference": "a49eda8ea64d3bccab93b6f7b1efa754a09bd989",
-            "shasum": ""
-        },
-        "require": {
-            "atk4/core": "~1.1.4",
-            "atk4/dsql": "~1.0.9",
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "atk4/schema": "*",
-            "codeclimate/php-test-reporter": "*",
-            "phpunit/phpunit": "4.*"
-        },
-        "time": "2017-01-20 12:05:56",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "atk4\\data\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Romans Malinovskis",
-                "email": "romans@agiletoolkit.org",
-                "homepage": "https://nearly.guru/"
-            }
-        ],
-        "description": "Agile Data - Database access abstraction framework",
-        "homepage": "https://github.com/atk4/data",
-        "keywords": [
-            "Active Record",
-            "builder",
-            "framework",
-            "mongodb",
-            "mysql",
-            "nosql",
-            "orm",
-            "postgresql",
-            "query",
-            "sql"
-        ]
-    },
-    {
         "name": "atk4/ui",
         "version": "0.4",
         "version_normalized": "0.4.0.0",
@@ -324,6 +265,65 @@
             "ui",
             "web",
             "widget"
+        ]
+    },
+    {
+        "name": "atk4/data",
+        "version": "1.1.9",
+        "version_normalized": "1.1.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/atk4/data.git",
+            "reference": "4b43a8de117b9598167e2108798d09b3699e5e7b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/atk4/data/zipball/4b43a8de117b9598167e2108798d09b3699e5e7b",
+            "reference": "4b43a8de117b9598167e2108798d09b3699e5e7b",
+            "shasum": ""
+        },
+        "require": {
+            "atk4/core": "~1.1.4",
+            "atk4/dsql": "~1.0.9",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "atk4/schema": "*",
+            "codeclimate/php-test-reporter": "*",
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2017-02-22 20:21:35",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "atk4\\data\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Romans Malinovskis",
+                "email": "romans@agiletoolkit.org",
+                "homepage": "https://nearly.guru/"
+            }
+        ],
+        "description": "Agile Data - Database access abstraction framework",
+        "homepage": "https://github.com/atk4/data",
+        "keywords": [
+            "Active Record",
+            "builder",
+            "framework",
+            "mongodb",
+            "mysql",
+            "nosql",
+            "orm",
+            "postgresql",
+            "query",
+            "sql"
         ]
     }
 ]
