@@ -18,9 +18,8 @@ class Model_QSPMaster extends \atk4\data\Model {
 	public $table = "qsp_master";
 
 	function init(){
-		parent::init();
-
 		global $db;
+		parent::init();
 
 		$this->hasOne('customer_id','Customer')->addTitle();
 		$this->hasOne('currency_id','Currency');
@@ -31,8 +30,24 @@ class Model_QSPMaster extends \atk4\data\Model {
 
 		$this->addField('type',['enum'=>['Quotation','SalesInvoice','SalesOrder','PurhcaseOrder','PurchaseInvoice']]);
 
-		$this->hasMany('QSPDetail', (new Model_QSPDetail($db)))
-		    ->addField('total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax']);
+		// Not Working
+		// $this->hasMany('QSPDetail', (new Model_QSPDetail($db)))
+		// 	->addField('total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax'])
+		// 	->addField('tax_amount', ['aggregate'=>'sum', 'field'=>'tax_amount'])
+		// 	;
+
+		// Not WOrking
+		// $this->hasMany('QSPDetail', (new Model_QSPDetail($db)))
+		// 	->addFields([
+		// 		['total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax']],
+		// 		['tax_amount', ['aggregate'=>'sum', 'field'=>'tax_amount']]
+		// 		]);
+	
+		// Final workaround working
+		$qsp_detail = $this->hasMany('QSPDetail', (new Model_QSPDetail($db)));
+		$qsp_detail->addField('total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax']);
+		$qsp_detail->addField('tax_amount', ['aggregate'=>'sum', 'field'=>'tax_amount']);
+
 		;
 
 		return;
