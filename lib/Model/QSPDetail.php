@@ -16,24 +16,22 @@ namespace Demo\Model;
 
 class QSPDetail extends \atk4\data\Model {
 	
-	public $table = "qsp_master";
+	public $table = "qsp_detail";
 
 	function init(){
 		parent::init();
 
-		$this->hasOne('QSPMaster');
-		$this->hasOne('Item');
+		$this->hasOne('qsp_master_id',(new QSPMaster()))->addTitle();
+		$this->hasOne('item_id','Item');
 		$this->addField('rate');
 		$this->addField('quantity');
 		$this->addField('tax_percentage');
 
-		$this->addExpression('amount_excluding_tax')->set(function($m,$q){
-			return $q->expr('[rate]*[quantity]');
-		});
+		$this->addExpression('amount_excluding_tax','[rate]*[quantity]');
 
-		$this->addExpression('tax_amount')->set('round([tax_percentage] * [amount_excluding_tax] / 100,2)');
+		$this->addExpression('tax_amount', 'round([tax_percentage] * [amount_excluding_tax] / 100,2)');
 
-		$this->addExpression('total_amount')->set('[amount_excluding_tax]+[tax_amount]');
+		$this->addExpression('total_amount', '[amount_excluding_tax]+[tax_amount]');
 
 	}
 }

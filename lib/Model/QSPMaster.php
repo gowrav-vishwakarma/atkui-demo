@@ -21,26 +21,31 @@ class QSPMaster extends \atk4\data\Model {
 	function init(){
 		parent::init();
 
-		$this->hasOne('Customer');
-		$this->hasOne('Currency');
-		$this->hasOne('Nominal');
-		$this->hasOne('Nominal');
+		global $db;
+
+		$this->hasOne('customer_id','Customer')->addTitle();
+		$this->hasOne('currency_id','Currency');
+		$this->hasOne('nominal_id');
 
 		$this->addField('number');
-		$this->addField('address');
+		// $this->addField('address');
 
 		$this->addField('type',['enum'=>['Quotation','SalesInvoice','SalesOrder','PurhcaseOrder','PurchaseInvoice']]);
 
-		$this->hasMany('QSPDetail');
+		$this->hasMany('QSPDetail', (new QSPDetail($db)))
+		    ->addField('total_amount', ['aggregate'=>'sum', 'field'=>'amount_excluding_tax']);
+		;
 
-		$this->addExpression('total_amount')->set(function($m,$q){
-			$details = $m->refSQL('Details');
+		return;
+
+		$this->addExpression('total_amount',function($m,$q){
+			$details = $m->refSQL('QSPDetails');
 			return $details->sum('amount_excluding_tax');
 		})->type('money');
 
 		$qsp_master_j->addField('discount_amount')->defaultValue(0)->type('money');
 
-		$this->addExpression('tax_amount')->set(function($m,$q){
+		$this->addExpression('tax_amount', function($m,$q){
 			$details = $m->refSQL('Details');
 			return $q->expr("[0]", [$details->sum('tax_amount')]);
 		})->type('money');
