@@ -29,6 +29,8 @@ $grid->setModel($customer);
 $form->onSubmit(function($f)use($modal,$grid){
 	// TODO :: DATA NOT SAVING
 	$f->model->save();
+	// TODO :: Sucess message comes in Modal popup
+	// TODO :: Grid not reloaded, no function defined
 	return [$f->success("Done",'Data saved'),$modal->js()->modal('hide'),$grid->js()->reload()];
 });
 
