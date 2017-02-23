@@ -12,5 +12,4 @@ return array(
     'atk4\\core\\' => array($vendorDir . '/atk4/core/src'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Facebook\\WebDriver\\' => array($vendorDir . '/facebook/webdriver/lib'),
-    '' => array($baseDir . '/lib'),
 );
