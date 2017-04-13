@@ -1,39 +1,22 @@
 <?php
 
-require_once "init.php";
+require_once "./vendor/autoload.php";
+$db = new \atk4\data\Persistence_SQL( \atk4\dsql\Connection::connect('mysql:dbname=atkui;host=localhost','root','root'));
 
-$app->title = "Customers";
+$app= new \atk4\ui\App('Agile UI - Demo Application');
+$app->initLayout('Admin');
 
-$customer = new Model_Contact($db);
+/** Define Menu */
+$app->layout->leftMenu->addItem(['Customers', 'icon'=>'users'], ['customers']);
+$app->layout->leftMenu->addItem(['Orders', 'icon'=>'money'], ['orders']);
 
-$form = new \atk4\ui\Form();
-// TODO : remove default Save Button
-$form->setModel($customer);
+/** Define Content */
+$app->add(['Button', 'Add'])->link('customers-edit.php');
 
-$modal = new View_Modal();
-$save_btn = $modal->addAction('Save',['ui positive right labled icon button']);
-$modal->add($form);
+$grid = $app->layout->add('Table');
+$grid->setModel(new Customer($db), false);
 
-$save_btn->on('click',$form->js()->submit());
-
-$app->add($modal);
-
-$addbtn= new \atk4\ui\Button('ADD');
-$addbtn->on('click',$modal->js()->modal('show'));
-
-$app->add($addbtn);
-$grid = new \atk4\ui\Grid();
-$grid->setModel($customer);
-
-
-$form->onSubmit(function($f)use($modal,$grid){
-	// TODO :: DATA NOT SAVING
-	$f->model->save();
-	// TODO :: Sucess message comes in Modal popup
-	// TODO :: Grid not reloaded, no function defined
-	return [$f->success("Done",'Data saved'),$modal->js()->modal('hide'),$grid->js()->reload()];
-});
-
-
-$app->add($grid);
-$app->run();
+$grid->addColumn('name', new \atk4\ui\TableColumn\Link('customers-edit.php?id={$id}'));
+$grid->addColumn('address');
+$grid->addColumn('type');
+$grid->addColumn('total');

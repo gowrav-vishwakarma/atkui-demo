@@ -1,39 +1,12 @@
 <?php
+require_once "./vendor/autoload.php";
+$db = new \atk4\data\Persistence_SQL( \atk4\dsql\Connection::connect('mysql:dbname=atkui;host=localhost','root','root'));
 
-require_once "init.php";
+// Move app logic into Admin class
+$app = new Admin();
+$app->init();
 
-$app->title = "Orders";
-
-$orders = new Model_SalesOrder($db);
-
-$form = new \atk4\ui\Form();
-// TODO : remove default Save Button
-$form->setModel($orders);
-
-$modal = new View_Modal();
-$save_btn = $modal->addAction('Save',['ui positive right labled icon button']);
-$modal->add($form);
-
-$save_btn->on('click',$form->js()->submit());
-
-$app->add($modal);
-
-$addbtn= new \atk4\ui\Button('ADD');
-$addbtn->on('click',$modal->js()->modal('show'));
-
-$app->add($addbtn);
-$grid = new \atk4\ui\Grid();
-$grid->setModel($orders);
-
-
-$form->onSubmit(function($f)use($modal,$grid){
-	// TODO :: DATA NOT SAVING
-	$f->model->save();
-	// TODO :: Sucess message comes in Modal popup
-	// TODO :: Grid not reloaded, no function defined
-	return [$f->success("Done",'Data saved'),$modal->js()->modal('hide'),$grid->js()->univ()->reload()];
-});
-
-
-$app->add($grid);
-$app->run();
+// move UI logic into Component
+$my_crud = new \atk4\ui\CRUD();
+$app->add($my_crud);
+$my_crud->setModel(new Order($db), ['ref','contact','price','qty','total']);

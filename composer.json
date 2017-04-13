@@ -3,14 +3,14 @@
     "description": "First demo for ATK UI and AgileData use",
     "type": "project",
     "require": {
-        "atk4/ui": "^0.4.0"
+        "atk4/ui": "^1.1"
     },
     "autoload":{
         "psr-0":{
             "": "lib/"
         }
     },
-    "license": "MIT",
+    "license": ["ou"],
     "authors": [
         {
             "name": "Gowrav Vishwakarma",
